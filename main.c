@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdbool.h>
 
 //takes an input and converts it into 2s complement or unsigned binary number
+//return type long just in case it needs to be stored.
 long printBinary(long input)
 {
     long binary = 0;
@@ -61,7 +59,10 @@ int numToBinary(long input)
 
 int main(void)
 {
-    long n = printBinary(-4);
+    long x;
+    printf("%s\n","Please enter in a number from -128 to 255"); //prompt user
+    scanf("%ld",&x); //recieve a singed long
+    printBinary(x); //execute function
     return 0;
 }
 
